@@ -26,8 +26,10 @@ const HeroSection = ({ className }) => (
           fluid={imageData}
           backgroundColor={`#040e18`}
         >
-          <h1>Welcome to the Remote Creative</h1>
-          <h2>Website Design and Development</h2>
+            <HeroCopy>
+                <h1>Welcome to the Remote Creative</h1>
+                <h2>Website Design and Development</h2>
+            </HeroCopy>
         </BackgroundImage>
       )
     }}
@@ -42,6 +44,13 @@ const StyledHeroSection = styled(HeroSection)`
   background-size: cover;
   display: flex;
   align-items: center;
+`
+
+const HeroCopy = styled.div`
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #fff;
 `
 
 export default StyledHeroSection
