@@ -17,41 +17,27 @@ const MainMenu = () => (
       render={data => (
         <ul className="mainMenu">
             <li 
-              key="blog" 
+              key="featured-projects" 
               style={{ margin: `0 10px` }} 
               className="mainMenuItem"
             >
               <Link 
-                to="/blog/"
+                to="#featured_projects"
                 style={{ color: `white`, textDecoration: `none`, fontFamily: `sans-serif`, }} 
                 >
-                Blog
+                Featured Projects
               </Link>
             </li>
-            {data.wordpressWpApiMenusMenusItems.items.map(item => (
             <li 
-              key={item.object_slug} 
-              style={{ margin: `0 10px` }} 
-              className="mainMenuItem"
-            >
-                <Link 
-                to={`/${item.object_slug}`}
-                style={{ color: `white`, textDecoration: `none`, fontFamily: `sans-serif`, }} 
-                >
-                {item.title}
-                </Link>
-            </li>
-            ))}
-            <li 
-              key="portfolio" 
+              key="about" 
               style={{ margin: `0 10px` }} 
               className="mainMenuItem"
             >
               <Link 
-                to="/portfolio/"
+                to="#home_about"
                 style={{ color: `white`, textDecoration: `none`, fontFamily: `sans-serif`, }} 
                 >
-                Portfolio
+                About
               </Link>
             </li>
         </ul>
